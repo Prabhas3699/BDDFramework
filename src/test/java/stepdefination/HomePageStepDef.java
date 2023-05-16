@@ -14,7 +14,7 @@ public class HomePageStepDef {
     HomePage homePage=new HomePage();
 
     @Given("launch url {string} and login using mobile number {string} and password {string}")
-    public void launch_url_and_login_using_mobile_number_and_password(String url, String mobile, String password) {
+    public void setHomePage(String url, String mobile, String password) {
         loginPage.initialLogin(url,mobile,password);
     }
     @When("click on select your address")
@@ -25,7 +25,7 @@ public class HomePageStepDef {
     @And("Verify Home page Title {string}")
     public void verify_login_page_title(String title) throws InterruptedException {
         Thread.sleep(3000);
-        String homePageTitle=homePage.getLoginPageTitle();
+        String homePageTitle=homePage.getHomePageTitle();
         Assert.assertEquals(title,homePageTitle);
     }
     @Then("home page close driver")

@@ -26,8 +26,8 @@ public class LoginPageStepDef {
     @Then("Verify Login page Title {string}")
     public void verify_login_page_title(String title) throws InterruptedException {
         Thread.sleep(3000);
-        String homePageTitle=loginPage.getLoginPageTitle();
-        Assert.assertEquals(title,homePageTitle);
+        String loginPageTitle=loginPage.getLoginPageTitle();
+        Assert.assertEquals(title,loginPageTitle);
     }
     @Then("login and redirect to homepage")
     public void login_and_redirect_to_homepage() {

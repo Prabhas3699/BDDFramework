@@ -16,7 +16,7 @@ public class HomePage extends BaseClass {
         WebElement getAddress=driver.findElement(getAddresslink);
         actions.doubleClick(getAddress).perform();
     }
-    public String getLoginPageTitle(){
+    public String getHomePageTitle(){
         return driver.getTitle();
     }
     public void closeDriver(){
